@@ -6,7 +6,9 @@ public class Main {
         Cat cat = new Cat();
         cat.eat();
         cat.sleep();
+        System.out.println(cat);
         cat.play();
+        System.out.println(cat);
         cat.play();
     }
 }
