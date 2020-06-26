@@ -46,7 +46,7 @@ public class FileWriter {
         File outputFile = new File(outputFilepath);
         java.io.FileWriter fileWriter = new java.io.FileWriter(outputFile);
         for(String text : result){
-            fileWriter.write(text);
+            fileWriter.write(text + "\r\n");
         }
         fileWriter.close();
 

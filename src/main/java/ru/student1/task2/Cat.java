@@ -21,4 +21,12 @@ public class Cat {
         isTired = true;
         isHungry = true;
     }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "isHungry=" + isHungry +
+                ", isTired=" + isTired +
+                '}';
+    }
 }
