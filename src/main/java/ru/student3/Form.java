@@ -18,6 +18,8 @@ public class Form extends JFrame implements ActionListener {
     private JButton button;
     private JTextArea textArea;
 
+    private FileFinder fileFinder;
+
 
     public Form(){
         this.frame = new JFrame("fileFindForm");
@@ -37,6 +39,8 @@ public class Form extends JFrame implements ActionListener {
         panel.add(extensionLabel);
         panel.add(button);
         panel.add(textArea);
+
+        fileFinder = new FileFinder();
     }
 
     public void findAllFile(){
@@ -54,7 +58,6 @@ public class Form extends JFrame implements ActionListener {
 
         String s = e.getActionCommand();
         if(s.equals("submit")){
-            FileFinder fileFinder = new FileFinder();
             try {
                 files = fileFinder.getAllFilesForPathAndExtension(catalogText.getText(), extensionText.getText());
             } catch (IOException ioException) {
